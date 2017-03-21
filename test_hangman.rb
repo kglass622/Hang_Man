@@ -16,11 +16,15 @@ class TestHangman < Minitest::Test
     end
 
  	def test_is_guess_correct
-      assert_equal(true, @game.is_guess_correct("m"))
+        assert_equal(true, @game.is_guess_correct("m"))
     end
 
  	def test_is_guess_false
-    assert_equal(false, @game.is_guess_correct("b"))
+    	assert_equal(false, @game.is_guess_correct("b"))
+    end
+
+    def test_return_index_number_of_correct_guess()
+    	assert_equal([5,11,19], @game.indexs_of_correct_guess("i") )
     end
 
 
