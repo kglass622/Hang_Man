@@ -54,6 +54,26 @@ class Game
     end
   end
 
+ def is_game_won
+    for space in @answer_so_far
+      return false if space == "_"
+    end
+    return true
+  end
+
+# game starts here
+  def display_answers_so_far()
+    return @answer_so_far.join(" ")
+  end
+
+
+  def next_turn()
+    puts "Enter your guess"
+    print "> "
+    guess = gets.chomp.downcase
+    return guess
+  end
+
 
 
 

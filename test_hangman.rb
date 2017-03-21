@@ -33,4 +33,17 @@ class TestHangman < Minitest::Test
   	end
 
  
+ 	def test_next_turn()
+    	assert_equal("a", @game.next_turn())
+  	end
+
+  	def test_display_answers_so_far
+    	assert_equal("_ _ _ _ / _ _ / _ _ _ _ _ _ / _ _ / _ _ _ _ / _ _", @game.display_answers_so_far)
+  	end
+
+  	def test_is_game_won
+    	assert_equal(false, @game.is_game_won)
+  	end
+
+ 
 end
