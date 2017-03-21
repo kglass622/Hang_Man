@@ -46,6 +46,13 @@ class Game
     return index_array
   end
 
+ def update_answers_so_far(guess)
+    index_array = indexs_of_correct_guess(guess)
+
+    for index in index_array
+      @answer_so_far[index] = guess
+    end
+  end
 
 
 

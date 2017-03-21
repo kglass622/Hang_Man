@@ -23,10 +23,14 @@ class TestHangman < Minitest::Test
     	assert_equal(false, @game.is_guess_correct("b"))
     end
 
-    def test_return_index_number_of_correct_guess()
+    def test_return_index_number_of_correct_guess
     	assert_equal([5,11,19], @game.indexs_of_correct_guess("i") )
     end
 
+	def test_update_answers_so_far
+   	 	@game.update_answers_so_far("i")
+   	 	assert_equal(["_", "_", "_", "_", "/", "i", "_", "/", "_", "_", "_", "i", "_", "_", "/", "_", "_", "/", "_", "i", "_", "_", "/", "_", "_"], @game.answer_so_far )
+  	end
 
  
 end
