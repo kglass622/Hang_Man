@@ -15,9 +15,9 @@ class TestHangman < Minitest::Test
     	assert_equal(["_", "_", "_", "_", "/", "_", "_", "/", "_", "_", "_", "_", "_", "_", "/", "_", "_", "/", "_", "_", "_", "_", "/", "_", "_"], @game.answer_so_far)
     end
 
- 	# def test_is_guess_correct()
-  #   assert_equal(true, @game.is_guess_correct("a"))
-  # end
+ 	def test_is_guess_correct()
+      assert_equal(true, @game.is_guess_correct("m"))
+    end
 
  
 end
