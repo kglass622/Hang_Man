@@ -52,6 +52,7 @@ class Game
     for index in index_array
       @answer_so_far[index] = guess
     end
+      answer_so_far
   end
 
  def is_game_won
