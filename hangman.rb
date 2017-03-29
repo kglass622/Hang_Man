@@ -2,15 +2,15 @@
 
  phrase = "marv is trying to kill me"
 
- puts "Welcome to Hangman"
+ #puts "Welcome to Hangman"
 
  while true
 
-puts "1 - Play"
-puts "2 - Enter phrase"
-puts "3 - Exit"
-puts "Enter selection"
-print "> "
+# puts "1 - Play"
+# puts "2 - Enter phrase"
+# puts "3 - Exit"
+# puts "Enter selection"
+# print "> "
 menu_selection = gets.chomp.downcase
 
 
@@ -48,7 +48,7 @@ menu_selection = gets.chomp.downcase
     when 3
       break
   end
-  puts "You Lose!" if lives = 0
+  puts "You Lose!" if lives == 0
 
 
 
