@@ -1,0 +1,102 @@
+<h2><%=p2%>, guess a letter <%=p1%> picked.</h2>
+
+<p>The word is <%=length%> characters long.</p>
+
+<p>you get 6 chances.</p>
+
+<form action="/make_guess" method="post">
+
+	<input type="text" name="letter" pattern="[A-Za-z]{1}">
+
+	<input type="submit" value='Guess!'>
+
+</form> 
+
+
+
+<% if wrong == 0 %>
+
+	<img src='/img/0.png'>
+
+<% elsif wrong == 1%>
+
+	<img src='/img/1.png'>
+
+<% elsif wrong == 2%>
+
+	<img src='/img/2.png'>
+
+<% elsif wrong == 3%>
+
+	<img src='/img/3.png'>
+
+<% elsif wrong == 4%>
+
+	<img src='/img/4.png'>
+
+<% elsif wrong == 5%>
+
+	<img src='/img/5.png'>
+
+<% else %>
+
+	<img src='/img/6.png'>
+
+
+
+<% end %>
+
+<p>The correct guess will appear here - <%=correct%></p>
+
+
+
+
+
+<body background="mined_minds.jpg">
+
+
+
+
+
+
+
+</html>
+
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<center><footer><br><br>
+<div class="bg_color"><p id="center"> Posted by: Kevin Glass</p>
+<p id="center">Contact information: <a href="http://minedminds.org">Mined Minds</a></p>
+
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+
+
+
+</div>
+
+
+
+
+</footer></body></center>

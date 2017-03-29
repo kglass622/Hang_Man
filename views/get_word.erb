@@ -1,109 +1,65 @@
-<html>
+<h2>Hi <%=p1%> and <%=p2%></h2>
+
+<p><%=p1%>, please enter a word for <%=p2%> to guess.</p>
+
+<p>Please make a selection!</p>
 
 
 
-<h1>Welcome to Hang Man</h1>
+<form action='pregame' method='post'>
 
-<h2>Please select a word to begin</h2>
+	<input type='password' name='guess_word' required>
 
+	<input type='submit' value="Let's Play!">
 
-
-    <form action='/select_players' method='post'>
-
-    <table>
-
-        <tr>
-
-                <select word='enter word'>
- 				<input type="submit" value="Submit">
-
-
-
-        </tr>
-
-    </table>
-
-    </form>
+</form>
 
 
 
 
 <body background="mined_minds.jpg">
 
+
+
+
+
+
+
 </html>
 
-
-
 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-
 <center><footer><br><br>
-
 <div class="bg_color"><p id="center"> Posted by: Kevin Glass</p>
-
 <p id="center">Contact information: <a href="http://minedminds.org">Mined Minds</a></p>
 
 
-
-
-
 <script>
-
 function startTime() {
-
     var today = new Date();
-
     var h = today.getHours();
-
     var m = today.getMinutes();
-
     var s = today.getSeconds();
-
     m = checkTime(m);
-
     s = checkTime(s);
-
     document.getElementById('txt').innerHTML =
-
     h + ":" + m + ":" + s;
-
     var t = setTimeout(startTime, 500);
-
 }
-
 function checkTime(i) {
-
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-
     return i;
-
 }
-
 </script>
-
-
 
 <body onload="startTime()">
 
-
-
 <div id="txt"></div>
-
-
 
 </body>
 
 
 
-
-
-
-
 </div>
-
-
-
-
-
 
 
 
